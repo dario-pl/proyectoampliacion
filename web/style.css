@@ -7,12 +7,12 @@ Version: 1.0
 */
 
 :root {
-    --primary-color: #0073e6;
-    --secondary-color: #00d4ff;
-    --dark-bg: #0f172a;
-    --light-bg: #f8fafc;
-    --text-main: #334155;
-    --text-light: #ffffff;
+    --primary-color: #10b981;    /* Verde Esmeralda tecnológico */
+    --secondary-color: #34d399;  /* Verde Menta brillante para destacar */
+    --dark-bg: #0b132b;          /* Fondo oscuro profundo */
+    --light-bg: #f4f7f6;         /* Fondo claro grisáceo */
+    --text-main: #2d3748;        /* Texto oscuro principal */
+    --text-light: #ffffff;       /* Texto blanco */
 }
 
 * {
@@ -41,6 +41,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 2px solid rgba(16, 185, 129, 0.2);
 }
 
 .header-container {
@@ -78,7 +79,7 @@ body {
 }
 
 .hero-section {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: linear-gradient(135deg, #0b132b 0%, #1c2541 100%);
     color: var(--text-light);
     padding: 100px 0;
     text-align: center;
@@ -99,17 +100,19 @@ body {
 .btn-primary {
     display: inline-block;
     background-color: var(--primary-color);
-    color: var(--text-light);
+    color: #0b132b;
     padding: 12px 30px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
 }
 
 .btn-primary:hover {
     background-color: var(--secondary-color);
-    color: var(--dark-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 211, 153, 0.4);
 }
 
 .section-title {
@@ -143,12 +146,15 @@ body {
     background: white;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    border-top: 3px solid transparent;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
+    border-top: 3px solid var(--primary-color);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
 }
 
 .service-card h3 {
@@ -157,7 +163,7 @@ body {
 }
 
 .about-section {
-    background-color: #f1f5f9;
+    background-color: #eaeff1;
     padding: 80px 0;
     text-align: center;
 }
@@ -175,10 +181,11 @@ body {
 
 .contact-mock-form {
     margin-top: 30px;
-    background: #e2e8f0;
+    background: #e2eaf0;
     padding: 40px;
     border-radius: 8px;
-    border: 2px dashed #cbd5e1;
+    border: 2px dashed var(--primary-color);
+    color: #4a5568;
 }
 
 .site-footer {
@@ -187,4 +194,5 @@ body {
     text-align: center;
     padding: 30px 0;
     font-size: 14px;
+    border-top: 1px solid rgba(16, 185, 129, 0.1);
 }
